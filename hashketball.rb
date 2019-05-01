@@ -165,7 +165,7 @@ end
    game_hash.each do |location, attributes|
     if game_hash[location].values.include?(team_name)
       attributes.each do |attribute, info|
-        if info.class == game_hash
+        if info.class == Hash
           info.each do |player, stats|
             stats.each do |stat, int|
               if stat == :number
